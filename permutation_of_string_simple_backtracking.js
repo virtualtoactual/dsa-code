@@ -25,11 +25,11 @@ function permute(str, op) {
     }
 }
 
-let myset = new Set();
 function permuteOptimised(str, op) {
     if (str.length === 0) {
         res.push(op)
     }
+    let myset = new Set();
 
     //yahan apne paas no of choices hai
     // for (let char of str) { //is loop se index nhi milta hai isiliye basic looop
@@ -47,7 +47,7 @@ function permuteOptimised(str, op) {
             let newOp = op + str.charAt(i);
 
             //now wapas se permute run kr denge
-            permute(newIp, newOp);
+            permuteOptimised(newIp, newOp);
         }
         //or age set me mil gya to kuchh krna hi nhi hai
     }
