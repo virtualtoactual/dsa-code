@@ -55,7 +55,26 @@ let solveNQueens = function (n) {
     let board = Array.from({ length: n }, () => new Array(n).fill(0));
     let temp = [];
     helper(0, board, n, temp);
+
+    let ans_val = [];
+    for (let i = 0; i < ans.length; i++) {
+        let ans_val_temp = [];   // ✅ reset for each solution
+
+        for (let j = 0; j < ans[i].length; j++) {
+            let queenCol = ans[i][j] - 1;  // ✅ convert to 0-based index
+
+            // ✅ works for ANY n, not just n=4
+            let row = '.'.repeat(n);
+            let rowArr = row.split('');
+            rowArr[queenCol] = 'Q';
+            ans_val_temp.push(rowArr.join(''));
+        }
+
+        ans_val.push(ans_val_temp);
+    }
+
     console.log(ans);
+    console.log(ans_val);
 };
 
 solveNQueens(4);
