@@ -1,7 +1,7 @@
 let arr = [2,3,7,8,10];
 let sum = 1;
 
-function knapsack(arr, target) {
+function knapsack(arr, sum) {
     let n = arr.length;
     let t = new Array(n+1).fill(0).map(() => new Array(sum+1).fill(0));
     for(let i = 0; i < n+1; i++) {
