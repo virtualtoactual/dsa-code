@@ -1,6 +1,9 @@
 let arr = [4, 1, 1, 1, 2, 3, 5];
 let k = 5;
 
+
+//variable size sliding window
+
 //find the subarray with the maximum sum of length k
 function maxSum(arr, k) {
     let i = 0;
