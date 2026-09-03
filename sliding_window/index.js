@@ -12,7 +12,7 @@ function maxSum(arr, k) {
         if(windowSum<k){
             j++;
         }
-        else if(windowSum === k){
+        else if(windowSum === k){ 
             maxLength = Math.max((j-i+1), maxLength);
             j++;
         }
