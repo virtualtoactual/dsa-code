@@ -33,3 +33,5 @@ const bottles = new Bottles();
 console.log(bottles.song());          // full song 99 to 0
 console.log(bottles.verses(3, 0));    // verses 3 down to 0
 console.log(bottles.verse(3));        // single verse
+
+module.exports = { Bottles };
